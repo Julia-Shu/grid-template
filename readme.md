@@ -11,3 +11,7 @@
 - git branch
 - git checkout
 - git merge
+- git remote
+- git push
+- git clone
+- git pull
