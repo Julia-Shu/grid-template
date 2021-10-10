@@ -1,14 +1,11 @@
-*,
-*::before,
-*::after {
+@use "../presets" as *;
+@use "../mixins" as *;
+
+* {
   box-sizing: border-box;
 }
 
 html {
-  overflow-y: scroll;
-
-  letter-spacing: 0.1em;
-
   color: $color-gray;
 
   font-family: $font-main;
@@ -20,36 +17,56 @@ h1 {
   letter-spacing: 0.078em;
 
   font-family: $font-header;
-  font-size: 3.75rem;
   font-weight: 300;
   line-height: 1.2em;
-}
 
-@include lg-min {
-  min-width: 250px;
-  height: 60px;
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
+}
+h2 {
+  letter-spacing: 0.1em;
+
+  color: $color-primary;
+
+  font-family: $font-header;
+  line-height: 1.2em;
+
+  @include lg-min {
+    margin-bottom: 3rem;
+
+    font-size: 2.5rem;
+  }
+  @include lg-md {
+    margin-bottom: 2.625rem;
+
+    font-size: 2rem;
+  }
+  @include md-sm {
+    margin-bottom: 2.25rem;
+
+    font-size: 1.5rem;
+  }
+  @include sm {
+    margin-bottom: 2.25rem;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+  }
+}
+h3 {
+  letter-spacing: 0.05em;
+
+  color: $color-gray;
+
   font-size: 1.125rem;
-}
-
-@include lg-md {
-  min-width: 200px;
-  height: 50px;
-
-  font-size: 1rem;
-}
-
-@include md {
-  font-size: 1.875rem;
-  min-width: 170px;
-  height: 40px;
-}
-
-@include sm-min {
-  min-width: 300px;
-}
-
-@include sm {
-  width: 100%;
 }
 
 a {
@@ -58,39 +75,10 @@ a {
   color: $color-light;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding-right: 1em;
-  padding-left: 1em;
-
-  transition: background-color 0.5s;
-  letter-spacing: 0.1em;
+p {
+  color: $color-gray;
 }
 
-.btn--light {
-  min-width: 250px;
-  height: 60px;
-
-  border: 2px solid $color-light;
-  background-color: rgba($color-light, 0.1);
-
-  font-size: 1.125rem;
-}
-
-.btn--primary {
-  min-width: 350px;
-  height: 60px;
-
-  border: 2px solid $color-primary;
-  background-color: rgba($color-primary, 0.8);
-
-  font-size: 1.125rem;
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: $color-accent;
+input:focus {
+  outline: none;
 }

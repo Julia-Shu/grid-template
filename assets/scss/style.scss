@@ -1,11 +1,15 @@
+@use "../../libs/normalize.css/normalize";
+
 @use "presets/skin";
 @use "presets/variables";
-@use "common/typography";
-@use "../../libs/normalize.css/normalize";
+
 @use "mixins/mixins";
 @use "mixins/mixins-media";
 @use "mixins/extends";
+
+@use "common/typography";
 @use "common/classes";
+
 @use "components/header/header";
 @use "components/header/header-overlay";
 @use "components/header/header-menu";
@@ -14,83 +18,8 @@
 @use "components/header/header-content";
 @use "components/sections/skills/skills";
 @use "components/sections/skills/skill-item";
-@use "components/sections/section-about";
+@use "components/sections/section-start";
 @use "components/sections/section-form";
 @use "components/sections/section-posts";
 
-@media (max-width: 992px) {
-  h1 {
-    font-size: 5.2rem;
-  }
-  .btn--light {
-    min-width: 200px;
-    height: 50px;
-
-    font-size: 1rem;
-  }
-  .skills__container {
-    display: grid;
-
-    gap: $gap;
-    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.875rem;
-  }
-  .btn--light {
-    min-width: 170px;
-    height: 40px;
-
-    font-size: 1rem;
-  }
-  .skills__container {
-    display: grid;
-
-    gap: $gap;
-    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .header-navbar__list {
-    display: none;
-  }
-  .skill-item__title {
-    font-size: 1.125rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .header-content__actions {
-    align-items: center;
-    flex-direction: column;
-  }
-  .skills__container {
-    display: grid;
-
-    gap: $gap;
-    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
-    grid-template-columns: 1fr;
-  }
-  .skills {
-    margin-bottom: 0;
-    padding: $gap;
-  }
-  .btn--primary {
-    width: 100%;
-  }
-}
-
-@media (min-height: 691px) {
-  .skills__container {
-    grid-auto-rows: calc(33.33vh - 13.333333px);
-  }
-}
-
-@media (max-height: 691px) {
-  .skills__container {
-    grid-auto-rows: calc(230px - 13.333333px);
-  }
-}
+@use "components/footer/footer";

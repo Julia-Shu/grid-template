@@ -629,6 +629,9 @@ input:focus {
 .form-item__input::-moz-placeholder {
   color: #637588;
 }
+.form-item__input:-ms-input-placeholder {
+  color: #637588;
+}
 .form-item__input::-ms-input-placeholder {
   color: #637588;
 }
@@ -643,6 +646,10 @@ input:focus {
 }
 .form-item__input:hover::-moz-placeholder,
 .form-item__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover:-ms-input-placeholder,
+.form-item__input:focus:-ms-input-placeholder {
   color: #8c9bab;
 }
 .form-item__input:hover::-ms-input-placeholder,
