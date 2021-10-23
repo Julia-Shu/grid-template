@@ -36,7 +36,6 @@
     transition: transform 0.5s;
 
     background-color: $color-primary;
-    background-image: url(../img/no_image.png);
     background-position: 50% 50%;
     background-size: cover;
 
@@ -54,7 +53,6 @@
     @include md-min {
       font-size: 1.25rem;
     }
-
     @include md {
       font-size: 1.125rem;
     }
