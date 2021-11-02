@@ -1252,6 +1252,12 @@ input:focus {
   .form__container {
     grid-template-columns: 1fr;
   }
+  .form {
+    padding: 14px 0;
+  }
+  .form .btn--primary {
+    margin: 10px 0 12px 0;
+  }
   .posts__grid {
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
     grid-template-columns: 1fr;
